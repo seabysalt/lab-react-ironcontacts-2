@@ -16,12 +16,25 @@ constructor() {
   }
 }
 
+addRandom = () => {
+  const extendedContacts = this.state.contacts;
+  extendedContacts.push([...contacts][Math.floor(Math.random() * [...contacts].length)])
+  this.setState({
+    contacts: extendedContacts
+  })
+}
+
   render() {
     return (
       <div className="App">
 
         <h1>IronContacts</h1>
         <div className="List">
+          <div>
+            <button onClick={this.addRandom} >Add Random Contact</button>
+            <button>Sort by Name</button>
+             <button>Sort by Popularity</button>
+          </div>
           <div>
             <h2>Picture</h2>
             <h2>Name</h2>
