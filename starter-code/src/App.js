@@ -24,6 +24,21 @@ addRandom = () => {
   })
 }
 
+sortByName = () => {
+  const sortedContactsByName = this.state.contacts.sort((a, b) => a.name.localeCompare(b.name));
+  this.setState({
+    contacts: sortedContactsByName
+  })
+}
+
+sortByPopularity = () => {
+  console.log("check")
+  const sortedContactsByPopularity = this.state.contacts.sort((a,b) => b.popularity - a.popularity)
+  this.setState({
+    contacts: sortedContactsByPopularity 
+  })
+}
+
   render() {
     return (
       <div className="App">
@@ -32,8 +47,8 @@ addRandom = () => {
         <div className="List">
           <div>
             <button onClick={this.addRandom} >Add Random Contact</button>
-            <button>Sort by Name</button>
-             <button>Sort by Popularity</button>
+            <button onClick={this.sortByName}>Sort by Name</button>
+            <button onClick={this.sortByPopularity}>Sort by Popularity</button>
           </div>
           <div>
             <h2>Picture</h2>
