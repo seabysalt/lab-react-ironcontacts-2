@@ -20,14 +20,14 @@ body {
   flex-direction: column;
   padding: 0 50px;
   margin: 0 50px;
-  width: 500px;
+  width: 600px;
   height: auto;
   align-items: center;
 }
 
 .List h2 {
   text-decoration: underline;
-  width: 150px;
+  width: 200px;
 }
 
 .List div {
@@ -37,18 +37,19 @@ body {
   align-items: center;
   padding: 0;
   margin: 5px 0;
-  width: 450px;
+  width: 550px;
   height: 100%;
 }
 
 
 .CelebImg img {
-  width: 100px;
+  max-width: 80px;
   height: auto;
 }
 
-.Name p {
-
+.Name {
+font-size: 20px;
+width: 200px;
 }
 
 
