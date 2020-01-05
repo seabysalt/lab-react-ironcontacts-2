@@ -52,13 +52,28 @@ font-size: 20px;
 width: 200px;
 }
 
-button {
+.BigBtn button {
   background-color: white;
   color: rgb(97, 126, 221);
   border:  rgb(97, 126, 221) 1px solid;
   border-radius: 5px;
   width: 200px;
   padding: 10px 0;
+  font-size: 12px;
+}
+
+.SmallBtn button {
+  background-color: white;
+  color: rgb(97, 126, 221);
+  border:  rgb(97, 126, 221) 1px solid;
+  border-radius: 5px;
+  width: 80px;
+  padding: 10px 0;
+  font-size: 12px;
+}
+
+.action {
+  margin-left: 20px;
 }
 
 

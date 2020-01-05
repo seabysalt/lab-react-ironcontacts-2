@@ -17,6 +17,10 @@ const list = (props) => {
           <p>{props.popularity}</p>
         </div>
 
+        <div className="SmallBtn">
+          <button onClick={props.clickToDelete}>Delete</button>
+        </div>
+
       </div>
   )
 };

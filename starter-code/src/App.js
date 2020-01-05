@@ -39,13 +39,21 @@ sortByPopularity = () => {
   })
 }
 
+deleteContact = (contactIndex) => {
+  const updatedContacts = this.state.contacts;
+  updatedContacts.splice(contactIndex, 1);
+  this.setState({
+      contacts: updatedContacts
+  })
+}
+
   render() {
     return (
       <div className="App">
 
         <h1>IronContacts</h1>
         <div className="List">
-          <div>
+          <div className="BigBtn">
             <button onClick={this.addRandom} >Add Random Contact</button>
             <button onClick={this.sortByName}>Sort by Name</button>
             <button onClick={this.sortByPopularity}>Sort by Popularity</button>
@@ -54,11 +62,12 @@ sortByPopularity = () => {
             <h2>Picture</h2>
             <h2>Name</h2>
             <h2>Popularity</h2>
+            <h2 className="action">Action</h2>
           </div>
 
           {
             this.state.contacts.map((contact, index) => {
-              return <List key={index} {...contact} />
+              return <List key={index} {...contact} clickToDelete={() => this.deleteContact(index)}/>
             })
           }
 
